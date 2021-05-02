@@ -62,6 +62,8 @@ namespace DBDiplomZernoKolhoz.UC
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(235)))), ((int)(((byte)(238)))));
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Courier New", 9.75F, System.Drawing.FontStyle.Bold);
             this.dataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCells;
+            this.dataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
             this.dataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(235)))), ((int)(((byte)(238)))));
             this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridView1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.RaisedVertical;
@@ -157,6 +159,7 @@ namespace DBDiplomZernoKolhoz.UC
             this.Удалить.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Удалить.HeaderText = "Удалить";
             this.Удалить.Name = "Удалить";
+            this.Удалить.Width = 69;
             // 
             // UC_Jurnal
             // 
@@ -166,6 +169,7 @@ namespace DBDiplomZernoKolhoz.UC
             this.Controls.Add(this.panel1);
             this.Name = "UC_Jurnal";
             this.Size = new System.Drawing.Size(1048, 690);
+            this.Load += new System.EventHandler(this.UC_Jurnal_Load);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
