@@ -63,9 +63,9 @@ namespace DBDiplomZernoKolhoz.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap nnnCBxMpvCw_kopia {
+        internal static System.Drawing.Bitmap icons8_delete_file_16px {
             get {
-                object obj = ResourceManager.GetObject("nnnCBxMpvCw-kopia", resourceCulture);
+                object obj = ResourceManager.GetObject("icons8_delete_file_16px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -73,9 +73,29 @@ namespace DBDiplomZernoKolhoz.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap wheat_1_118841 {
+        internal static System.Drawing.Bitmap icons8_exit_16px {
             get {
-                object obj = ResourceManager.GetObject("wheat-1-118841", resourceCulture);
+                object obj = ResourceManager.GetObject("icons8_exit_16px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_new_copy_16px {
+            get {
+                object obj = ResourceManager.GetObject("icons8_new_copy_16px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap nnnCBxMpvCw_kopia {
+            get {
+                object obj = ResourceManager.GetObject("nnnCBxMpvCw-kopia", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

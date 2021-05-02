@@ -54,6 +54,37 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Scripts\database.cs" />
+    <Compile Include="UC\UC_Jurnal.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC\UC_Jurnal.Designer.cs">
+      <DependentUpon>UC_Jurnal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC\UC_Kombain.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC\UC_Kombain.Designer.cs">
+      <DependentUpon>UC_Kombain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC\UC_Syshka.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC\UC_Syshka.Designer.cs">
+      <DependentUpon>UC_Syshka.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC\UC_Voditel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC\UC_Voditel.Designer.cs">
+      <DependentUpon>UC_Voditel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC\UC_Zerno.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC\UC_Zerno.Designer.cs">
+      <DependentUpon>UC_Zerno.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -67,6 +98,21 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="UC\UC_Jurnal.resx">
+      <DependentUpon>UC_Jurnal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC\UC_Kombain.resx">
+      <DependentUpon>UC_Kombain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC\UC_Syshka.resx">
+      <DependentUpon>UC_Syshka.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC\UC_Voditel.resx">
+      <DependentUpon>UC_Voditel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC\UC_Zerno.resx">
+      <DependentUpon>UC_Zerno.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -81,10 +127,28 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\wheat-1-118841.png" />
+    <None Include="Resources\nnnCBxMpvCw-kopia.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\nnnCBxMpvCw-kopia.png" />
+    <Folder Include="Forms\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_exit_26px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_new_copy_26px_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_delete_file_26px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_exit_16px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_delete_file_16px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_new_copy_16px.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
