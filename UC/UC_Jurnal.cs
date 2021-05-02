@@ -25,7 +25,7 @@ namespace DBDiplomZernoKolhoz.UC
             dataAdapter.Fill(ds);
             dataGridView1.DataSource = ds.Tables[0].DefaultView;
 
-            dataGridView1.Columns[0].Visible = false;
+            dataGridView1.Columns[1].Visible = false;
 
         }
     }

@@ -114,6 +114,7 @@ namespace DBDiplomZernoKolhoz
             this.button7.TabIndex = 5;
             this.button7.Text = "Водители";
             this.button7.UseVisualStyleBackColor = true;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
             // button6
             // 
@@ -127,6 +128,7 @@ namespace DBDiplomZernoKolhoz
             this.button6.TabIndex = 4;
             this.button6.Text = "Комбайнеры";
             this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // button5
             // 
@@ -140,6 +142,7 @@ namespace DBDiplomZernoKolhoz
             this.button5.TabIndex = 3;
             this.button5.Text = "Зернопродукция";
             this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // button4
             // 
@@ -153,6 +156,7 @@ namespace DBDiplomZernoKolhoz
             this.button4.TabIndex = 2;
             this.button4.Text = "Сушка";
             this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // button3
             // 

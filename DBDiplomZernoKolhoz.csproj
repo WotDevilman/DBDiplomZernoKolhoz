@@ -52,6 +52,42 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\More\MoreKombain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\More\MoreKombain.Designer.cs">
+      <DependentUpon>MoreKombain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\More\MorePole.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\More\MorePole.Designer.cs">
+      <DependentUpon>MorePole.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\More\MoreReproductia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\More\MoreReproductia.Designer.cs">
+      <DependentUpon>MoreReproductia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\More\MoreSclad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\More\MoreSclad.Designer.cs">
+      <DependentUpon>MoreSclad.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\More\MoreVoditel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\More\MoreVoditel.Designer.cs">
+      <DependentUpon>MoreVoditel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\More\MoreZerno.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\More\MoreZerno.Designer.cs">
+      <DependentUpon>MoreZerno.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Scripts\database.cs" />
@@ -129,9 +165,7 @@
   <ItemGroup>
     <None Include="Resources\nnnCBxMpvCw-kopia.png" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Forms\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <None Include="Resources\icons8_exit_26px.png" />
   </ItemGroup>

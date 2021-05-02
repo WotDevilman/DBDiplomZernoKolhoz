@@ -36,5 +36,33 @@ namespace DBDiplomZernoKolhoz
 
             addControll(uc);
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            UC_Syshka uc = new UC_Syshka();
+
+            addControll(uc);
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            UC_Zerno uc = new UC_Zerno();
+
+            addControll(uc);
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            UC_Kombain uc = new UC_Kombain();
+
+            addControll(uc);
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            UC_Voditel uc = new UC_Voditel();
+
+            addControll(uc);
+        }
     }
 }

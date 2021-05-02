@@ -169,6 +169,7 @@ namespace DBDiplomZernoKolhoz.UC
             this.Controls.Add(this.panel1);
             this.Name = "UC_Voditel";
             this.Size = new System.Drawing.Size(1048, 690);
+            this.Load += new System.EventHandler(this.UC_Voditel_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
