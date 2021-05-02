@@ -165,7 +165,11 @@
   <ItemGroup>
     <None Include="Resources\nnnCBxMpvCw-kopia.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Content Include="Zerno.mdb">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
   <ItemGroup>
     <None Include="Resources\icons8_exit_26px.png" />
   </ItemGroup>
