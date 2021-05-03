@@ -41,19 +41,40 @@ namespace DBDiplomZernoKolhoz.Forms
 
         private void button3_Click(object sender, EventArgs e)
         {
-            if (Items.Dostup != 1)
+            if (Items.Dostup == 0)
             {
-                string quest = "INSERT INTO Зернопродукция (Культура, Сорт, Репродукция, ВремяПосева, Цена, [Всего на складе]) VALUES('" + Культура.Text + "','" + Сорт.Text + "','" + IDReprodyctia + "','" + Дата.Value.ToShortDateString() + "','" + Цена.Text + "'," + Всего.Text + ")";
+                string quest = "INSERT INTO Зернопродукция (Культура, Сорт, Репродукция, ВремяПосева, Цена, [Всего на складе]) VALUES('" + Культура.Text + "','" + Сорт.Text + "','" + IDReprodyctia + "','" + Дата.Text + "','" + Цена.Text + "'," + Всего.Text + ")";
                 db.connect.Open();
                 OleDbCommand dataAdapter = new OleDbCommand(quest, db.connect);
                 dataAdapter.ExecuteNonQuery();
             }
             else
             {
-                string quest = $"UPDATE ОсновныеПоказатели SET Предприятия = '{idpredpriatia}', ОсновнойВидПродукции = '{idvidproducta}', ЧислоРаботников = '{TRabot.Text}', Прибыль = '{TPribil.Text}' where КодОсновныеПоказатели = {ID}";
+                string quest = $"UPDATE Зернопродукция SET Культура = '{Культура.Text}', Сорт = '{Сорт.Text}', Репродукция = '{IDReprodyctia}',ВремяПосева = '{Дата.Text}', Цена = '{Цена.Text}', [Всего на складе] = '{Всего.Text}' where КодЗернопродукции = {Items.listItems[0]}";
                 db.connect.Open();
                 OleDbCommand dataAdapter = new OleDbCommand(quest, db.connect);
                 dataAdapter.ExecuteNonQuery();
+            }
+        }
+
+        private void Zerno_Load(object sender, EventArgs e)
+        {
+            if (Items.Dostup != 0)
+            {
+                Культура.Text = Items.listItems[1];
+                Сорт.Text = Items.listItems[2];
+                More.Text = Items.listItems[3];
+                Дата.Text = Items.listItems[4];
+                Цена.Text = Items.listItems[5];
+                Всего.Text = Items.listItems[6];
+
+                db.connect.Open();
+                OleDbCommand cmd = db.connect.CreateCommand();
+                cmd.CommandType = CommandType.Text;
+                cmd.CommandText = "SELECT КодРепродукции FROM Репродукция where Значение = '" + Items.listItems[3] + "'";
+                cmd.ExecuteNonQuery();
+                IDReprodyctia = Convert.ToInt32(cmd.ExecuteScalar());
+                db.connect.Close();
             }
         }
     }

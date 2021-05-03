@@ -28,5 +28,17 @@ namespace DBDiplomZernoKolhoz.Forms.More
 
             dataGridView1.Columns[0].Visible = false;
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            Items Items = new Items();
+            Items.MoveZernoID = Convert.ToInt32(dataGridView1.Rows[e.RowIndex].Cells[0].Value);
+            this.Close();
+        }
     }
 }

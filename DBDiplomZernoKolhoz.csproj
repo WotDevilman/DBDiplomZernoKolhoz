@@ -173,6 +173,9 @@
     <EmbeddedResource Include="Forms\More\MoreZerno.resx">
       <DependentUpon>MoreZerno.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Syshka.resx">
+      <DependentUpon>Syshka.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\Zerno.resx">
       <DependentUpon>Zerno.cs</DependentUpon>
     </EmbeddedResource>

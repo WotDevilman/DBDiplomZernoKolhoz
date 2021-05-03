@@ -47,6 +47,8 @@ namespace DBDiplomZernoKolhoz.UC
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(235)))), ((int)(((byte)(238)))));
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Courier New", 9.75F, System.Drawing.FontStyle.Bold);
             this.dataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
@@ -80,6 +82,7 @@ namespace DBDiplomZernoKolhoz.UC
             this.dataGridView1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(235)))), ((int)(((byte)(238)))));
             this.dataGridView1.Location = new System.Drawing.Point(0, 46);
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
             dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(235)))), ((int)(((byte)(238)))));
             dataGridViewCellStyle5.Font = new System.Drawing.Font("Courier New", 9.75F, System.Drawing.FontStyle.Bold);
@@ -96,6 +99,7 @@ namespace DBDiplomZernoKolhoz.UC
             this.dataGridView1.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Courier New", 9.75F, System.Drawing.FontStyle.Bold);
             this.dataGridView1.Size = new System.Drawing.Size(1048, 644);
             this.dataGridView1.TabIndex = 3;
+            this.dataGridView1.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellDoubleClick);
             // 
             // Удалить
             // 
@@ -106,6 +110,7 @@ namespace DBDiplomZernoKolhoz.UC
             this.Удалить.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Удалить.HeaderText = "Удалить";
             this.Удалить.Name = "Удалить";
+            this.Удалить.ReadOnly = true;
             this.Удалить.Width = 69;
             // 
             // panel1
@@ -134,6 +139,7 @@ namespace DBDiplomZernoKolhoz.UC
             this.button3.Size = new System.Drawing.Size(32, 32);
             this.button3.TabIndex = 2;
             this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button2
             // 

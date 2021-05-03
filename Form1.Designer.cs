@@ -39,8 +39,8 @@ namespace DBDiplomZernoKolhoz
             this.button5 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
-            this.panelUC = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.panelUC = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -172,14 +172,6 @@ namespace DBDiplomZernoKolhoz
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
-            // panelUC
-            // 
-            this.panelUC.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelUC.Location = new System.Drawing.Point(189, 30);
-            this.panelUC.Name = "panelUC";
-            this.panelUC.Size = new System.Drawing.Size(1081, 690);
-            this.panelUC.TabIndex = 2;
-            // 
             // pictureBox1
             // 
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Top;
@@ -190,6 +182,14 @@ namespace DBDiplomZernoKolhoz
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
+            // 
+            // panelUC
+            // 
+            this.panelUC.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelUC.Location = new System.Drawing.Point(189, 30);
+            this.panelUC.Name = "panelUC";
+            this.panelUC.Size = new System.Drawing.Size(1081, 690);
+            this.panelUC.TabIndex = 2;
             // 
             // Form1
             // 
@@ -227,8 +227,8 @@ namespace DBDiplomZernoKolhoz
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Panel panelUC;
         private System.Windows.Forms.Button button7;
+        public System.Windows.Forms.Panel panelUC;
     }
 }
 
