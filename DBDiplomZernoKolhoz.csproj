@@ -91,6 +91,7 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Scripts\database.cs" />
+    <Compile Include="Scripts\Items.cs" />
     <Compile Include="UC\UC_Jurnal.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -123,6 +124,24 @@
     </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\More\MoreKombain.resx">
+      <DependentUpon>MoreKombain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\More\MorePole.resx">
+      <DependentUpon>MorePole.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\More\MoreReproductia.resx">
+      <DependentUpon>MoreReproductia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\More\MoreSclad.resx">
+      <DependentUpon>MoreSclad.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\More\MoreVoditel.resx">
+      <DependentUpon>MoreVoditel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\More\MoreZerno.resx">
+      <DependentUpon>MoreZerno.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
