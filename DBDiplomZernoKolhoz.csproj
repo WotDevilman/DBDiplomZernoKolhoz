@@ -52,6 +52,18 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Jurnal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Jurnal.Designer.cs">
+      <DependentUpon>Jurnal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Kombain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Kombain.Designer.cs">
+      <DependentUpon>Kombain.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\More\MoreKombain.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -87,6 +99,24 @@
     </Compile>
     <Compile Include="Forms\More\MoreZerno.Designer.cs">
       <DependentUpon>MoreZerno.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Syshka.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Syshka.Designer.cs">
+      <DependentUpon>Syshka.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Voditel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Voditel.Designer.cs">
+      <DependentUpon>Voditel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Zerno.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Zerno.Designer.cs">
+      <DependentUpon>Zerno.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -143,6 +173,9 @@
     <EmbeddedResource Include="Forms\More\MoreZerno.resx">
       <DependentUpon>MoreZerno.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Zerno.resx">
+      <DependentUpon>Zerno.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -185,6 +218,9 @@
     <None Include="Resources\nnnCBxMpvCw-kopia.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\icons8_more_16px.png" />
+    <None Include="Resources\icons8_multiply_16px.png" />
+    <None Include="Resources\icons8_add_row_16px.png" />
     <Content Include="Zerno.mdb">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>

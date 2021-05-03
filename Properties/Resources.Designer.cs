@@ -63,6 +63,16 @@ namespace DBDiplomZernoKolhoz.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_add_row_16px {
+            get {
+                object obj = ResourceManager.GetObject("icons8_add_row_16px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_delete_file_16px {
             get {
                 object obj = ResourceManager.GetObject("icons8_delete_file_16px", resourceCulture);
@@ -76,6 +86,26 @@ namespace DBDiplomZernoKolhoz.Properties {
         internal static System.Drawing.Bitmap icons8_exit_16px {
             get {
                 object obj = ResourceManager.GetObject("icons8_exit_16px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_more_16px {
+            get {
+                object obj = ResourceManager.GetObject("icons8_more_16px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_multiply_16px {
+            get {
+                object obj = ResourceManager.GetObject("icons8_multiply_16px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

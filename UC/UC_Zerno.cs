@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using DBDiplomZernoKolhoz.Scripts;
+using DBDiplomZernoKolhoz.Forms;
 
 namespace DBDiplomZernoKolhoz.UC
 {
@@ -27,6 +28,15 @@ namespace DBDiplomZernoKolhoz.UC
             dataGridView1.DataSource = ds.Tables[0].DefaultView;
 
             dataGridView1.Columns[1].Visible = false;
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            using (Zerno f = new Zerno())
+            {
+                f.ShowDialog();
+                this.OnLoad(e);
+            }
         }
     }
 }

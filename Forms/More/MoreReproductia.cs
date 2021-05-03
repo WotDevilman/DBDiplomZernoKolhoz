@@ -34,6 +34,13 @@ namespace DBDiplomZernoKolhoz.Forms.More
             Items Items = new Items();
             Items.MoveReproductiaID = Convert.ToInt32(dataGridView1.Rows[e.RowIndex].Cells[0].Value);
             Items.MoveReproductia = Convert.ToString(dataGridView1.Rows[e.RowIndex].Cells[1].Value);
+
+            this.Close();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

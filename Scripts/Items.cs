@@ -13,5 +13,7 @@ namespace DBDiplomZernoKolhoz.Scripts
         public static string MoveReproductia = "";
         public static int MoveReproductiaID = 0;
 
+
+        List<string> listItems = new List<string>();
     }
 }
