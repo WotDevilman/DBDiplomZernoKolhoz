@@ -28,5 +28,11 @@ namespace DBDiplomZernoKolhoz.Forms.More
 
             dataGridView1.Columns[0].Visible = false;
         }
+
+        private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            Items.MovePoleID = Convert.ToInt32(dataGridView1.Rows[e.RowIndex].Cells[0].Value);
+            this.Close();
+        }
     }
 }

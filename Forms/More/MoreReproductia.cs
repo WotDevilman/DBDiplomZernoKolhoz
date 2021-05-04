@@ -31,7 +31,6 @@ namespace DBDiplomZernoKolhoz.Forms.More
 
         private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            Items Items = new Items();
             Items.MoveReproductiaID = Convert.ToInt32(dataGridView1.Rows[e.RowIndex].Cells[0].Value);
             Items.MoveReproductia = Convert.ToString(dataGridView1.Rows[e.RowIndex].Cells[1].Value);
 

@@ -155,6 +155,9 @@
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Jurnal.resx">
+      <DependentUpon>Jurnal.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\Kombain.resx">
       <DependentUpon>Kombain.cs</DependentUpon>
     </EmbeddedResource>

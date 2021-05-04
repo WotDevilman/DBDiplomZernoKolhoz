@@ -28,5 +28,13 @@ namespace DBDiplomZernoKolhoz.Forms.More
 
             dataGridView1.Columns[0].Visible = false;
         }
+
+        private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            Items.MoveVoditelID = Convert.ToInt32(dataGridView1.Rows[e.RowIndex].Cells[0].Value);
+            Items.MoveVoditel = Convert.ToString(dataGridView1.Rows[e.RowIndex].Cells[1].Value + " " + dataGridView1.Rows[e.RowIndex].Cells[2].Value + " "+ dataGridView1.Rows[e.RowIndex].Cells[3].Value);
+
+            this.Close();
+        }
     }
 }
