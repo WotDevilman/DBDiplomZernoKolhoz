@@ -155,6 +155,9 @@
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Kombain.resx">
+      <DependentUpon>Kombain.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\More\MoreKombain.resx">
       <DependentUpon>MoreKombain.cs</DependentUpon>
     </EmbeddedResource>
@@ -175,6 +178,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Syshka.resx">
       <DependentUpon>Syshka.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Voditel.resx">
+      <DependentUpon>Voditel.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Zerno.resx">
       <DependentUpon>Zerno.cs</DependentUpon>
