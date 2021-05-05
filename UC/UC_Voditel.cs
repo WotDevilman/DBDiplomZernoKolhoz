@@ -59,5 +59,41 @@ namespace DBDiplomZernoKolhoz.UC
                 this.OnLoad(e);
             }
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            List<int> deleteID = new List<int>();
+            deleteID.Clear();
+
+            for (int i = 0; i < dataGridView1.RowCount; i++)
+            {
+                if (Convert.ToBoolean(dataGridView1.Rows[i].Cells[0].Value) == true)
+                    deleteID.Add(Convert.ToInt32(dataGridView1.Rows[i].Cells[1].Value));
+            }
+            for (int i = 0; i < deleteID.Count; i++)
+            {
+                string quest = $"DELETE FROM Водитель WHERE КодВодителя = {deleteID[i]}";
+                db.connect.Open();
+                OleDbCommand dataCommander = new OleDbCommand(quest, db.connect);
+                dataCommander.ExecuteNonQuery();
+                db.connect.Close();
+            }
+            OleDbDataAdapter dataAdapter = new OleDbDataAdapter(db.selectVoditel, db.connect);
+            DataSet ds = new DataSet();
+            dataAdapter.Fill(ds);
+            dataGridView1.DataSource = ds.Tables[0].DefaultView;
+        }
+
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex != -1)
+            {
+                if (e.ColumnIndex == 0)
+                {
+                    bool TFalse = Convert.ToBoolean(dataGridView1.Rows[e.RowIndex].Cells[0].Value);
+                    dataGridView1.Rows[e.RowIndex].Cells[0].Value = !TFalse;
+                }
+            }
+        }
     }
 }
