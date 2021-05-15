@@ -100,6 +100,12 @@
     <Compile Include="Forms\More\MoreZerno.Designer.cs">
       <DependentUpon>MoreZerno.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\PrintSyshka.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\PrintSyshka.Designer.cs">
+      <DependentUpon>PrintSyshka.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Syshka.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -179,6 +185,9 @@
     <EmbeddedResource Include="Forms\More\MoreZerno.resx">
       <DependentUpon>MoreZerno.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\PrintSyshka.resx">
+      <DependentUpon>PrintSyshka.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\Syshka.resx">
       <DependentUpon>Syshka.cs</DependentUpon>
     </EmbeddedResource>
@@ -233,6 +242,7 @@
     <None Include="Resources\icons8_more_16px.png" />
     <None Include="Resources\icons8_multiply_16px.png" />
     <None Include="Resources\icons8_add_row_16px.png" />
+    <None Include="Resources\icons8_print_16px.png" />
     <Content Include="Zerno.mdb">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
@@ -254,6 +264,35 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\icons8_new_copy_16px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="Microsoft.Office.Core">
+      <Guid>{2DF8D04C-5BFA-101B-BDE5-00AA0044DE52}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>7</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="Microsoft.Office.Interop.Word">
+      <Guid>{00020905-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>8</VersionMajor>
+      <VersionMinor>6</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="VBIDE">
+      <Guid>{0002E157-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>5</VersionMajor>
+      <VersionMinor>3</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

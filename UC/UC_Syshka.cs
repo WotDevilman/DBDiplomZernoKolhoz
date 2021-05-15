@@ -95,5 +95,13 @@ namespace DBDiplomZernoKolhoz.UC
                 }
             }
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            using (PrintSyshka f = new PrintSyshka())
+            {
+                f.ShowDialog();
+            }
+        }
     }
 }

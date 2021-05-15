@@ -123,6 +123,16 @@ namespace DBDiplomZernoKolhoz.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_print_16px {
+            get {
+                object obj = ResourceManager.GetObject("icons8_print_16px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap nnnCBxMpvCw_kopia {
             get {
                 object obj = ResourceManager.GetObject("nnnCBxMpvCw-kopia", resourceCulture);
