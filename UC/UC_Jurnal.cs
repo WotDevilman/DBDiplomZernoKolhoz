@@ -163,5 +163,93 @@ namespace DBDiplomZernoKolhoz.UC
             }
 
         }
+        private readonly string TemplateFileName1 = System.IO.Path.Combine(System.IO.Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location), "Documents\\405.docx");
+        private void ReplateWordDocument(string stupToReplate, string text, Word.Document worddoc)
+        {
+            var range = worddoc.Content;
+            range.Find.ClearFormatting();
+            range.Find.Execute(FindText: stupToReplate, ReplaceWith: text);
+        }
+        private void button5_Click(object sender, EventArgs e)
+        {
+            List<string> name = new List<string>();
+
+            db.connect.Open();
+            OleDbCommand cmd = db.connect.CreateCommand();
+            cmd.CommandType = CommandType.Text;
+            cmd.CommandText = $"SELECT Зернопродукция.Культура FROM Зернопродукция INNER JOIN Журнал ON Зернопродукция.КодЗернопродукции = Журнал.КодЗернопродукции GROUP BY Зернопродукция.Культура, Журнал.Дата HAVING Журнал.Дата = #{DateTime.Now.ToShortDateString().Split('.')[0] + "/" + DateTime.Now.ToShortDateString().Split('.')[1] + "/" + DateTime.Now.ToShortDateString().Split('.')[2]}#";
+            cmd.ExecuteNonQuery();
+            db.connect.Close();
+            DataTable dt = new DataTable();
+            OleDbDataAdapter da = new OleDbDataAdapter(cmd);
+            da.Fill(dt);
+            foreach (DataRow item in dt.Rows)
+            {
+                name.Add(item[0].ToString());
+            }
+            if (name.Count != 0)
+            {
+                for (int i = 0; i < name.Count ; i++)
+                {
+
+
+                    SaveFileDialog sfd = new SaveFileDialog();
+                    sfd.Filter = "Document (*.docx) | *.docx";
+
+                    if (sfd.ShowDialog() == DialogResult.OK)
+                    {
+
+                        List<string> pole = new List<string>();
+                        List<string> netto = new List<string>();
+
+                        db.connect.Open();
+                        cmd = db.connect.CreateCommand();
+                        cmd.CommandType = CommandType.Text;
+                        cmd.CommandText = $"SELECT (Поле.Наименование &' '& Поле.Месторасположение), Sum(Журнал.Нетто) AS [Sum-Нетто] FROM Зернопродукция INNER JOIN(Поле INNER JOIN Журнал ON Поле.КодПоля = Журнал.КодПоля) ON Зернопродукция.КодЗернопродукции = Журнал.КодЗернопродукции GROUP BY Зернопродукция.Культура, Поле.Наименование, Поле.Месторасположение, Журнал.Дата HAVING Журнал.Дата = #{DateTime.Now.ToShortDateString().Split('.')[0] + "/" + DateTime.Now.ToShortDateString().Split('.')[1] + "/" + DateTime.Now.ToShortDateString().Split('.')[2]}# and Зернопродукция.Культура = '{name[i]}'";
+                        cmd.ExecuteNonQuery();
+                        db.connect.Close();
+                        dt = new DataTable();
+                        da = new OleDbDataAdapter(cmd);
+                        da.Fill(dt);
+                        foreach (DataRow item in dt.Rows)
+                        {
+                            pole.Add(item[0].ToString());
+                            netto.Add(item[1].ToString());
+                        }
+                        var newpathdoc = sfd.FileName;
+
+                        //TODO
+                        var wordAPP = new Word.Application();
+                        wordAPP.Visible = false;
+
+                        var worddocument = wordAPP.Documents.Open(TemplateFileName1);
+
+                        //ReplateWordDocument("{отходы}", ot.ToString(), worddocument);
+
+
+                        var nn = 0;
+                        Word.Table tab = worddocument.Tables[1];
+                        for (int j = 3; j <= pole.Count + 2; j++)
+                        {
+                            tab.Rows.Add(Missing.Value);
+                            tab.Cell(j, 3).Range.Text = name[i];
+                            tab.Cell(j, 4).Range.Text = pole[nn];
+                            tab.Cell(j, 5).Range.Text = netto[nn];
+                            nn++;
+                        }
+
+
+                        worddocument.SaveAs(newpathdoc);
+
+
+
+
+
+                        MessageBox.Show("Документ сохранился");
+    
+                    } 
+                }
+            }
+        }
     }
 }

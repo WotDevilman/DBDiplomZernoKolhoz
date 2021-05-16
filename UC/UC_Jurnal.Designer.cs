@@ -36,12 +36,13 @@ namespace DBDiplomZernoKolhoz.UC
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.button4 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.Удалить = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.button4 = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -49,6 +50,7 @@ namespace DBDiplomZernoKolhoz.UC
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(235)))), ((int)(((byte)(238)))));
+            this.panel1.Controls.Add(this.button5);
             this.panel1.Controls.Add(this.button4);
             this.panel1.Controls.Add(this.button3);
             this.panel1.Controls.Add(this.button2);
@@ -58,6 +60,20 @@ namespace DBDiplomZernoKolhoz.UC
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1048, 46);
             this.panel1.TabIndex = 0;
+            // 
+            // button4
+            // 
+            this.button4.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(221)))), ((int)(((byte)(224)))));
+            this.button4.FlatAppearance.BorderSize = 2;
+            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button4.Image = global::DBDiplomZernoKolhoz.Properties.Resources.icons8_print_16px;
+            this.button4.Location = new System.Drawing.Point(508, 7);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(32, 32);
+            this.button4.TabIndex = 4;
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // button3
             // 
@@ -168,19 +184,19 @@ namespace DBDiplomZernoKolhoz.UC
             this.Удалить.Name = "Удалить";
             this.Удалить.Width = 69;
             // 
-            // button4
+            // button5
             // 
-            this.button4.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(221)))), ((int)(((byte)(224)))));
-            this.button4.FlatAppearance.BorderSize = 2;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button4.Image = global::DBDiplomZernoKolhoz.Properties.Resources.icons8_print_16px;
-            this.button4.Location = new System.Drawing.Point(508, 7);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(32, 32);
-            this.button4.TabIndex = 4;
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
+            this.button5.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(221)))), ((int)(((byte)(224)))));
+            this.button5.FlatAppearance.BorderSize = 2;
+            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button5.Image = global::DBDiplomZernoKolhoz.Properties.Resources.icons8_print_16px;
+            this.button5.Location = new System.Drawing.Point(546, 8);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(32, 32);
+            this.button5.TabIndex = 5;
+            this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // UC_Jurnal
             // 
@@ -206,5 +222,6 @@ namespace DBDiplomZernoKolhoz.UC
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.DataGridViewCheckBoxColumn Удалить;
         private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button button5;
     }
 }
