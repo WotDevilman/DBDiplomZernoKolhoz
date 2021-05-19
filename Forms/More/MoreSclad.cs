@@ -32,6 +32,7 @@ namespace DBDiplomZernoKolhoz.Forms.More
         private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             Items.MoveScladID = Convert.ToInt32(dataGridView1.Rows[e.RowIndex].Cells[0].Value);
+            Items.MoveSclad = Items.MovePole = Convert.ToString(dataGridView1.Rows[e.RowIndex].Cells[1].Value);
             this.Close();
         }
     }

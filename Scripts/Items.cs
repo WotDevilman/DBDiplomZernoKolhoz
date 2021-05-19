@@ -14,6 +14,7 @@ namespace DBDiplomZernoKolhoz.Scripts
         public static int MoveReproductiaID = 0;
 
         public static int MoveZernoID = 0;
+        public static string MoveZerno = "";
 
         public static int MoveVoditelID = 0;
         public static string MoveVoditel = "";
@@ -22,8 +23,10 @@ namespace DBDiplomZernoKolhoz.Scripts
         public static string MoveKombain = "";
 
         public static int MovePoleID = 0;
+        public static string MovePole = "";
         
         public static int MoveScladID = 0;
+        public static string MoveSclad = "";
 
         public static List<string> listItems = new List<string>();
     }

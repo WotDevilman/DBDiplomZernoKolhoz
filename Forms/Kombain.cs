@@ -47,12 +47,15 @@ namespace DBDiplomZernoKolhoz.Forms
         {
             if (Items.Dostup != 0)
             {
+                label1.Text = "Запись комбайнера";
+
                 Фамилия.Text = Items.listItems[1].Split(' ')[0];
                 Имя.Text = Items.listItems[1].Split(' ')[1];
                 Отчество.Text = Items.listItems[1].Split(' ')[2];
                 Марка.Text = Items.listItems[2];
                 Номер.Text = Items.listItems[3];
             }
+            else label1.Text = "Изменения комбайнера";
         }
     }
 }

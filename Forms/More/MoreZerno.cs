@@ -37,6 +37,7 @@ namespace DBDiplomZernoKolhoz.Forms.More
         private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             Items.MoveZernoID = Convert.ToInt32(dataGridView1.Rows[e.RowIndex].Cells[0].Value);
+            Items.MoveZerno = Convert.ToString(dataGridView1.Rows[e.RowIndex].Cells[1].Value);
             this.Close();
         }
     }

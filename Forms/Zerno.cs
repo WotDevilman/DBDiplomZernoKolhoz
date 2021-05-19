@@ -61,6 +61,8 @@ namespace DBDiplomZernoKolhoz.Forms
         {
             if (Items.Dostup != 0)
             {
+                label1.Text = "Запись зерна";
+
                 Культура.Text = Items.listItems[1];
                 Сорт.Text = Items.listItems[2];
                 More.Text = Items.listItems[3];
@@ -76,6 +78,7 @@ namespace DBDiplomZernoKolhoz.Forms
                 IDReprodyctia = Convert.ToInt32(cmd.ExecuteScalar());
                 db.connect.Close();
             }
+            else label1.Text = "Изменения зерна";
         }
     }
 }

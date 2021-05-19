@@ -57,12 +57,15 @@ namespace DBDiplomZernoKolhoz.Forms
         {
             if (Items.Dostup != 0)
             {
+                label1.Text = "Запись сушки";
+
                 Дата.Value = Convert.ToDateTime(Items.listItems[1]);
                 More.Text = Items.listItems[2];
                 Масса.Text = Items.listItems[3];
                 Мааспослесушки.Text = Items.listItems[4];
                 Отходы.Text = Items.listItems[5];
             }
+            else label1.Text = "Изменения сушки";
         }
     }
 }

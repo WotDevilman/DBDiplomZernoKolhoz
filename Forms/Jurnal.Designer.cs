@@ -38,6 +38,8 @@ namespace DBDiplomZernoKolhoz.Forms
             this.label1 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.Нетто = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
             this.button7 = new System.Windows.Forms.Button();
             this.Поле = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
@@ -55,8 +57,6 @@ namespace DBDiplomZernoKolhoz.Forms
             this.Зерно = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.Нетто = new System.Windows.Forms.TextBox();
-            this.label10 = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -129,9 +129,9 @@ namespace DBDiplomZernoKolhoz.Forms
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(3, 11);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(178, 18);
+            this.label1.Size = new System.Drawing.Size(148, 18);
             this.label1.TabIndex = 1;
-            this.label1.Text = "Выбор репродукции";
+            this.label1.Text = "Запись журнала";
             // 
             // button1
             // 
@@ -178,6 +178,26 @@ namespace DBDiplomZernoKolhoz.Forms
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(622, 309);
             this.panel1.TabIndex = 13;
+            // 
+            // Нетто
+            // 
+            this.Нетто.Font = new System.Drawing.Font("Courier New", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.Нетто.ForeColor = System.Drawing.Color.Black;
+            this.Нетто.Location = new System.Drawing.Point(289, 188);
+            this.Нетто.Name = "Нетто";
+            this.Нетто.Size = new System.Drawing.Size(198, 29);
+            this.Нетто.TabIndex = 34;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Courier New", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label10.ForeColor = System.Drawing.Color.Black;
+            this.label10.Location = new System.Drawing.Point(69, 188);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(65, 22);
+            this.label10.TabIndex = 33;
+            this.label10.Text = "Нетто";
             // 
             // button7
             // 
@@ -366,26 +386,6 @@ namespace DBDiplomZernoKolhoz.Forms
             this.label2.Size = new System.Drawing.Size(164, 22);
             this.label2.TabIndex = 0;
             this.label2.Text = "Зернопродукция";
-            // 
-            // Нетто
-            // 
-            this.Нетто.Font = new System.Drawing.Font("Courier New", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Нетто.ForeColor = System.Drawing.Color.Black;
-            this.Нетто.Location = new System.Drawing.Point(289, 188);
-            this.Нетто.Name = "Нетто";
-            this.Нетто.Size = new System.Drawing.Size(198, 29);
-            this.Нетто.TabIndex = 34;
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Courier New", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label10.ForeColor = System.Drawing.Color.Black;
-            this.label10.Location = new System.Drawing.Point(69, 188);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(65, 22);
-            this.label10.TabIndex = 33;
-            this.label10.Text = "Нетто";
             // 
             // Jurnal
             // 

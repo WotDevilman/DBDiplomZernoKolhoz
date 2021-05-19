@@ -48,6 +48,8 @@ namespace DBDiplomZernoKolhoz.Forms
         {
             if (Items.Dostup != 0)
             {
+                label1.Text = "Запись водителя";
+
                 Фамилия.Text = Items.listItems[1].Split(' ')[0];
                 Имя.Text = Items.listItems[1].Split(' ')[1];
                 Отчество.Text = Items.listItems[1].Split(' ')[2];
@@ -55,6 +57,7 @@ namespace DBDiplomZernoKolhoz.Forms
                 Номер.Text = Items.listItems[3];
                 Тара.Text = Items.listItems[4];
             }
+            else label1.Text = "Изменения водителя";
         }
     }
 }
