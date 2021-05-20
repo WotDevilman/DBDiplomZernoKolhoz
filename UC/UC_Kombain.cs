@@ -97,5 +97,20 @@ namespace DBDiplomZernoKolhoz.UC
                 }
             }
         }
+
+        private void textBox1_KeyUp(object sender, KeyEventArgs e)
+        {
+            for (int i = 0; i < dataGridView1.RowCount; i++)
+            {
+                dataGridView1.Rows[i].Selected = false;
+                for (int j = 0; j < dataGridView1.ColumnCount; j++)
+                    if (dataGridView1.Rows[i].Cells[j].Value != null)
+                        if (dataGridView1.Rows[i].Cells[j].Value.ToString().ToLower().Contains(textBox1.Text.ToLower()))
+                        {
+                            dataGridView1.Rows[i].Selected = true;
+                            break;
+                        }
+            }
+        }
     }
 }
