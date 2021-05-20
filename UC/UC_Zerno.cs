@@ -217,7 +217,7 @@ namespace DBDiplomZernoKolhoz.UC
         {
             if (Культура.Text != " ")
             {
-                kylt = $"Зернопродукция.Культура = {Культура.Text}";
+                kylt = $"Зернопродукция.Культура = '{Культура.Text}'";
             }
             else
             {
