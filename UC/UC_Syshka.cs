@@ -11,6 +11,8 @@ using System.Windows.Forms;
 using DBDiplomZernoKolhoz.Scripts;
 using DBDiplomZernoKolhoz.Forms;
 
+using DBDiplomZernoKolhoz.Forms.More;
+
 namespace DBDiplomZernoKolhoz.UC
 {
     public partial class UC_Syshka : UserControl
@@ -102,6 +104,133 @@ namespace DBDiplomZernoKolhoz.UC
             {
                 f.ShowDialog();
             }
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            panel2.Visible = false;
+        }
+        string zerno = "";
+        string massa = "";
+        string massaposle = "";
+        string othod = "";
+        private void button5_Click(object sender, EventArgs e)
+        {
+            List<string> tex = new List<string>();
+            List<string> te = new List<string>();
+            string quest = "WHERE ";
+
+            tex.Clear();
+            te.Clear();
+
+            if (zerno.Length != 0) tex.Add(zerno);
+            if (massa.Length != 0) tex.Add(massa);
+            if (massaposle.Length != 0) tex.Add(massaposle);
+            if (othod.Length != 0) tex.Add(othod);
+            if (tex.Count() != 0)
+            {
+                if (tex.Count == 1)
+                {
+                    te.Add(tex[0]);
+                }
+                if (tex.Count == 2)
+                {
+                    te.Add(tex[0]);
+                    te.Add(" and ");
+                    te.Add(tex[1]);
+                }
+                else if (tex.Count == 3)
+                {
+                    te.Add(tex[0]);
+                    te.Add(" and ");
+                    te.Add(tex[1]);
+                    te.Add(" and ");
+                    te.Add(tex[2]);
+                }
+                else if (tex.Count == 4)
+                {
+                    te.Add(tex[0]);
+                    te.Add(" and ");
+                    te.Add(tex[1]);
+                    te.Add(" and ");
+                    te.Add(tex[2]);
+                    te.Add(" and ");
+                    te.Add(tex[3]);
+                }
+                for (int i = 0; i < te.Count; i++)
+                {
+                    quest += te[i];
+                }
+                OleDbDataAdapter dataAdapter = new OleDbDataAdapter(db.selectSyshka + quest, db.connect);
+                DataSet ds = new DataSet();
+                dataAdapter.Fill(ds);
+                dataGridView1.DataSource = ds.Tables[0].DefaultView;
+            }
+        }
+
+        private void Масса_TextChanged(object sender, EventArgs e)
+        {
+            if (Масса.Text != " ")
+            {
+                massa = $"Сушка.Масса = {Масса.Text}";
+            }
+            else
+            {
+                massa = "";
+            }
+        }
+
+        private void Мааспослесушки_TextChanged(object sender, EventArgs e)
+        {
+            if (Мааспослесушки.Text != " ")
+            {
+                massaposle = $"Сушка.МассаПослеСушки = {Мааспослесушки.Text}";
+            }
+            else
+            {
+                massaposle = "";
+            }
+        }
+
+        private void Отходы_TextChanged(object sender, EventArgs e)
+        {
+            if (Отходы.Text != " ")
+            {
+                othod = $"Сушка.Отходы = {Отходы.Text}";
+            }
+            else
+            {
+                othod = "";
+            }
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            using (MoreZerno f = new MoreZerno()) {
+                f.ShowDialog();
+            }
+            if(Items.MoveZerno.Length != 0)
+            {
+                zerno = $"Сушка.КодЗернопродукции = {Items.MoveZernoID}";
+                More.Text = Items.MoveZerno;
+            }
+            else
+            {
+                zerno = "";
+            }
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            panel2.Visible = true;
+        }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            zerno = "";
+            othod = "";
+            massa = "";
+            massaposle = "";
         }
     }
 }

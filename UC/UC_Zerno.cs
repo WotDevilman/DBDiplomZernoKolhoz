@@ -11,6 +11,8 @@ using System.Windows.Forms;
 using DBDiplomZernoKolhoz.Scripts;
 using DBDiplomZernoKolhoz.Forms;
 
+using DBDiplomZernoKolhoz.Forms.More;
+
 namespace DBDiplomZernoKolhoz.UC
 {
     public partial class UC_Zerno : UserControl
@@ -93,6 +95,180 @@ namespace DBDiplomZernoKolhoz.UC
                     bool TFalse = Convert.ToBoolean(dataGridView1.Rows[e.RowIndex].Cells[0].Value);
                     dataGridView1.Rows[e.RowIndex].Cells[0].Value = !TFalse;
                 }
+            }
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            panel2.Visible = false;
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            panel2.Visible = true;
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            using (MoreReproductia f = new MoreReproductia()) {
+                f.ShowDialog();
+            }
+            if(Items.MoveReproductia.Length != 0)
+            {
+
+            }
+            else
+            {
+
+            }
+        }
+        string kylt = "";
+        string sort = "";
+        string reprod = "";
+        string vremaposev = "";
+        string cena = "";
+        string sklad = "";
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            List<string> tex = new List<string>();
+            List<string> te = new List<string>();
+            string quest = "WHERE ";
+
+            tex.Clear();
+            te.Clear();
+
+            if (kylt.Length != 0) tex.Add(kylt);
+            if (sort.Length != 0) tex.Add(sort);
+            if (reprod.Length != 0) tex.Add(reprod);
+            if (vremaposev.Length != 0) tex.Add(vremaposev);
+            if (cena.Length != 0) tex.Add(cena);
+            if (sklad.Length != 0) tex.Add(sklad);
+
+            if (tex.Count() != 0)
+            {
+                if (tex.Count == 1)
+                {
+                    te.Add(tex[0]);
+                }
+                if (tex.Count == 2)
+                {
+                    te.Add(tex[0]);
+                    te.Add(" and ");
+                    te.Add(tex[1]);
+                }
+                else if (tex.Count == 3)
+                {
+                    te.Add(tex[0]);
+                    te.Add(" and ");
+                    te.Add(tex[1]);
+                    te.Add(" and ");
+                    te.Add(tex[2]);
+                }
+                else if (tex.Count == 4)
+                {
+                    te.Add(tex[0]);
+                    te.Add(" and ");
+                    te.Add(tex[1]);
+                    te.Add(" and ");
+                    te.Add(tex[2]);
+                    te.Add(" and ");
+                    te.Add(tex[3]);
+                }
+                else if (tex.Count == 5)
+                {
+                    te.Add(tex[0]);
+                    te.Add(" and ");
+                    te.Add(tex[1]);
+                    te.Add(" and ");
+                    te.Add(tex[2]);
+                    te.Add(" and ");
+                    te.Add(tex[3]);
+                    te.Add(" and ");
+                    te.Add(tex[4]);
+                }
+                else if (tex.Count == 6)
+                {
+                    te.Add(tex[0]);
+                    te.Add(" and ");
+                    te.Add(tex[1]);
+                    te.Add(" and ");
+                    te.Add(tex[2]);
+                    te.Add(" and ");
+                    te.Add(tex[3]);
+                    te.Add(" and ");
+                    te.Add(tex[4]);
+                    te.Add(" and ");
+                    te.Add(tex[5]);
+                }
+                for (int i = 0; i < te.Count; i++)
+                {
+                    quest += te[i];
+                }
+                OleDbDataAdapter dataAdapter = new OleDbDataAdapter(db.selectZerno + quest, db.connect);
+                DataSet ds = new DataSet();
+                dataAdapter.Fill(ds);
+                dataGridView1.DataSource = ds.Tables[0].DefaultView;
+            }
+        }
+
+        private void Культура_TextChanged(object sender, EventArgs e)
+        {
+            if (Культура.Text != " ")
+            {
+                kylt = $"Зернопродукция.Культура = {Культура.Text}";
+            }
+            else
+            {
+                kylt = "";
+            }
+        }
+
+        private void Сорт_TextChanged(object sender, EventArgs e)
+        {
+            if (Сорт.Text != " ")
+            {
+                sort = $"Зернопродукция.Сорт = '{Сорт.Text}'";
+            }
+            else
+            {
+                sort = "";
+            }
+        }
+
+        private void Дата_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (Дата.Text != " ")
+            {
+                vremaposev = $"Зернопродукция.ВремяПосева = '{Дата.Text}'";
+            }
+            else
+            {
+                vremaposev = "";
+            }
+        }
+
+        private void Цена_TextChanged(object sender, EventArgs e)
+        {
+            if (Цена.Text != " ")
+            {
+                cena = $"Зернопродукция.Цена = {Цена.Text}";
+            }
+            else
+            {
+                cena = "";
+            }
+        }
+
+        private void Всего_TextChanged(object sender, EventArgs e)
+        {
+            if (Всего.Text != " ")
+            {
+                sklad = $"Зернопродукция.[Всего на складе] = {Всего.Text}";
+            }
+            else
+            {
+                sklad = "";
             }
         }
     }
