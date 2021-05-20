@@ -275,6 +275,14 @@ namespace DBDiplomZernoKolhoz.UC
 
         private void button8_Click(object sender, EventArgs e)
         {
+
+             kylt = "";
+             sort = "";
+             reprod = "";
+             vremaposev = "";
+             cena = "";
+             sklad = "";
+
             OleDbDataAdapter dataAdapter = new OleDbDataAdapter(db.selectZerno, db.connect);
             DataSet ds = new DataSet();
             dataAdapter.Fill(ds);
