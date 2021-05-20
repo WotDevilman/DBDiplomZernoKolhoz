@@ -115,7 +115,8 @@ namespace DBDiplomZernoKolhoz.UC
             }
             if(Items.MoveReproductia.Length != 0)
             {
-
+                reprod = $"Зернопродукция.Репродукция = {Items.MoveReproductiaID}";
+                More.Text = Items.MoveReproductia;
             }
             else
             {
@@ -270,6 +271,14 @@ namespace DBDiplomZernoKolhoz.UC
             {
                 sklad = "";
             }
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            OleDbDataAdapter dataAdapter = new OleDbDataAdapter(db.selectZerno, db.connect);
+            DataSet ds = new DataSet();
+            dataAdapter.Fill(ds);
+            dataGridView1.DataSource = ds.Tables[0].DefaultView;
         }
     }
 }

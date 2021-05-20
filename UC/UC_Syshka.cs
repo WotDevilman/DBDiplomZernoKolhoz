@@ -231,6 +231,10 @@ namespace DBDiplomZernoKolhoz.UC
             othod = "";
             massa = "";
             massaposle = "";
+            OleDbDataAdapter dataAdapter = new OleDbDataAdapter(db.selectSyshka, db.connect);
+            DataSet ds = new DataSet();
+            dataAdapter.Fill(ds);
+            dataGridView1.DataSource = ds.Tables[0].DefaultView;
         }
     }
 }
